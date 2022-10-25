@@ -27,7 +27,7 @@ type
   private
     { Private declarations }
     FCaixa: TCaixa;
-    xCriar, xClick: Integer; // Para Criar a classe apenas uma vez
+    xCriar: Integer; // Para Criar a classe apenas uma vez
     procedure Processar;
     procedure CaixaAberto;
     procedure AddSuprimento;
@@ -187,9 +187,8 @@ var
   I: Integer;
 begin
   try
-    if xClick = 0 then // Para mostrar a lista
-    begin              // caso clique de novo Irá mostrar a imagem e tirar
-                       // A lista
+    if not ListaOperacoes.Visible then
+    begin
 
       if xCriar = 0 then // Caso o objeto n for criado ainda, para n dar
         begin            // Acess Violetion
@@ -206,14 +205,12 @@ begin
 
         Image1.Visible:= False;
         ListaOperacoes.Visible:= True;
-        xClick := 1;
     end
 
     else
     begin
       Image1.Visible:= true;
       ListaOperacoes.Visible:= false;
-      xClick := 0;
     end;
   except
     on E: exception do
@@ -229,7 +226,8 @@ end;
 
 procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-  FreeAndNil(FCaixa);
+  if Assigned(FCaixa) then
+    FreeAndNil(FCaixa);
 end;
 
 end.

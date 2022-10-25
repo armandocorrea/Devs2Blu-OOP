@@ -37,10 +37,10 @@ type
       constructor AbrirCaixa (const pSaldo: Double);
 
       function FecharCaixa: Double;
-      function RetirarValor  (const pValor: Double):   Double;
-      function AdicionarValor(const pValor: Double): Double;
       function VisualizarSaldoAtual: Double;
       function ExibirLista(const pValor: Integer) : string;
+      procedure RetirarValor  (const pValor: Double);
+      procedure AdicionarValor(const pValor: Double);
 
   end;
 
@@ -116,7 +116,7 @@ begin
     raise Exception.Create('Caixa Ja Aberto');
 end;
 
-function TCaixa.AdicionarValor(const pValor: Double): Double;
+procedure TCaixa.AdicionarValor(const pValor: Double);
 begin
   if FCaixaAberto = true then
   begin
@@ -130,7 +130,7 @@ begin
     raise Exception.Create('Abra o caixa primeiro');
 end;
 
-function TCaixa.RetirarValor(const pValor: Double): Double;
+procedure TCaixa.RetirarValor(const pValor: Double);
 begin
   if FCaixaAberto = true then
   begin
