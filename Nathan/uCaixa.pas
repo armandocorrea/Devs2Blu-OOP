@@ -24,13 +24,16 @@ type
     procedure SetListar(const Value: TStringList);
 
   public
+
     constructor Create; //Setar valores iniciais
     destructor Destroy; //Destruir o listar(Bonus)
+
     function AbrirCaixa(const aValor: Double): string; //Método para abrir o caixa
     function RetirarValor(const aValor: Double): string; //Método para retirar valor do caixa
     function AdicionarValor(const aValor: Double): string; //Método para adicionar valor do caixa
     function FecharCaixa: Boolean; //Método para Fechar o caixa
     function metodoListar: TStringList;
+
     property SaldoInicial: Double read GetSaldoInicial write SetSaldoInicial;
     property SaldoAtual: Double read GetSaldoAtual write SetSaldoAtual;
     property CaixaAberto: Boolean read GetCaixaAberto write SetCaixaAberto;
@@ -54,14 +57,6 @@ begin
   FListar := TStringList.Create;
 end;
 
-// Destruindo o objeto listar
-destructor TCaixa.Destroy;
-begin
-  FreeAndNil(FListar);
-
-  inherited;
-end;
-
 //Método para abrir o caixa
 function TCaixa.AbrirCaixa(const aValor: Double): STRING;
 begin
@@ -78,7 +73,7 @@ function TCaixa.AdicionarValor(const aValor: Double): STRING;
 begin
   SaldoAtual := aValor + SaldoAtual;
 
-  Result := 'Adicionado ao caixa R$: '+  FloatToStr(aValor);
+  Result := 'Adicionado ao caixa R$: ' +  FloatToStr(aValor);
   FListar.Add(result);
 end;
 
@@ -97,6 +92,14 @@ begin
   FCaixaAberto := False;
 
   Result := FCaixaAberto;
+end;
+
+// Destruindo o objeto listar
+destructor TCaixa.Destroy;
+begin
+  FreeAndNil(FListar);
+
+  inherited;
 end;
 
 function TCaixa.GetCaixaAberto: Boolean;

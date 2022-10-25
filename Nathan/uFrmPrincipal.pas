@@ -8,7 +8,9 @@ uses
   Vcl.Imaging.jpeg, Vcl.Imaging.pngimage;
 
 type
+  //Enumerado para o case
   TOpcoes = (tpAbrirCaixa, tpSuprimento, tpSangria, tpSaldoAtual, tpFecharCaixa);
+
   TfrmPrincipal = class(TForm)
     Label1: TLabel;
     edtValor: TEdit;
@@ -27,9 +29,9 @@ type
     procedure btnExibirClick(Sender: TObject);
   private
     FCaixa: TCaixa;
-    procedure ExecutarOpcao;
-    procedure Fechar;
-    procedure Lista;
+    procedure ExecutarOpcao; //Onde vamos fazer os procedimentos, de acordo com o RadioGroup
+    procedure Fechar; //Irá fechar a aplicação
+    procedure Lista; //Aqui irá listar todas as ações
   public
     { Public declarations }
   end;
@@ -71,6 +73,7 @@ begin
   case TOpcoes(rgOpcoes.ItemIndex) of
     tpAbrirCaixa://Caso escolha por abrir o caixa
     begin
+      //Validando se o caixa já não está aberto.
       if FCaixa.CaixaAberto = true then
         lblCaixa.Caption := 'O Caixa já está aberto!'
 
@@ -84,6 +87,7 @@ begin
 
     tpSuprimento://Caso escolha por adicionar dinheiro
     begin
+        //Validando se o caixa está fechado.
        if FCaixa.CaixaAberto = false then
         lblCaixa.Caption := 'O Caixa está fechado!'
 
@@ -94,7 +98,7 @@ begin
          end;
     end;
 
-    tpSangria://Caso escolha por tirar dinheiro
+    tpSangria://Caso escolha por retirar dinheiro
     begin
        if FCaixa.CaixaAberto = false then
         lblCaixa.Caption := 'O Caixa está fechado!'
@@ -113,8 +117,8 @@ begin
 
       else
         begin
-          label1.Enabled := False;
-          edtValor.Enabled := False;
+          label1.Enabled := False;  //Trancar usabilidade
+          edtValor.Enabled := False;  //Trancar usabilidade
 
           lblCaixa.Caption := 'Saldo Atual R$:' + FloatToStr(FCaixa.SaldoAtual);
         end;
@@ -123,7 +127,7 @@ begin
     tpFecharCaixa: //Caso escolha por fechar o caixa
     begin
       if FCaixa.CaixaAberto = false then
-        lblCaixa.Caption := 'O Caixa está fechado!'
+        lblCaixa.Caption := 'O Caixa já está fechado!'
 
       else
         begin
@@ -135,6 +139,9 @@ begin
           lblCaixa.Caption := 'Você fechou o caixa com um saldo de R$:' + FloatToStr(FCaixa.SaldoAtual);
         end;
     end;
+
+    else //Caso não escolha nenhuma opção
+      lblCaixa.Caption := 'Selecione uma opção!';
   end;
 end;
 
