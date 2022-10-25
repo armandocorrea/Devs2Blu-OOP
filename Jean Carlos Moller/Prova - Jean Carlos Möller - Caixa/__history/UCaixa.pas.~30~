@@ -1,0 +1,118 @@
+unit UCaixa;
+
+interface
+
+type
+  TCaixa = Class
+
+  private
+    // Atributos
+    FSaldoInicial: Double;
+    FSaldoAtual: Double;
+    FCaixaAberto: Boolean;
+
+    function GetCaixaAberto: Boolean;
+
+    function GetSaldoAtual: Double;
+    function GetSaldoInicial: Double;
+
+    procedure SetSaldoAtual(const Value: Double);
+    procedure SetSaldoInicial(const Value: Double);
+    procedure SetCaixaAberto(const Value: Boolean);
+
+  public
+    // Métodos
+    function AbrirCaixa(const aValor: Double): Boolean;
+
+    function RetirarValor(const aValor: Double): Double;
+    function AdicionarValor(const aValor: Double): Double;
+    function FecharCaixa: Boolean;
+
+    property SaldoInicial: Double read GetSaldoInicial write SetSaldoInicial;
+    property SaldoAtual: Double read GetSaldoAtual write SetSaldoAtual;
+    property CaixaAberto: Boolean read GetCaixaAberto write SetCaixaAberto;
+
+  End;
+
+implementation
+
+uses
+  System.SysUtils;
+
+{ TCaixa }
+// ----------------------GET AND SET--------------------
+function TCaixa.GetSaldoInicial: Double;
+begin
+  Result := FSaldoInicial;
+end;
+
+procedure TCaixa.SetSaldoInicial(const Value: Double);
+begin
+  FSaldoInicial := Value;
+end;
+
+function TCaixa.GetSaldoAtual: Double;
+begin
+  Result := FSaldoAtual;
+end;
+
+procedure TCaixa.SetSaldoAtual(const Value: Double);
+begin
+  FSaldoAtual := Value;
+end;
+
+function TCaixa.GetCaixaAberto: Boolean;
+begin
+  Result := FCaixaAberto;
+end;
+
+procedure TCaixa.SetCaixaAberto(const Value: Boolean);
+begin
+  FCaixaAberto := Value;
+end;
+
+// -----------------------------------------------------------
+
+function TCaixa.AbrirCaixa(const aValor: Double): Boolean;
+begin
+  if FCaixaAberto = True then
+  begin
+    raise Exception.Create('Caixa já está aberto');
+  end;
+
+  FCaixaAberto := True;
+
+  FSaldoAtual := FSaldoAtual + aValor;
+  FSaldoInicial := aValor;
+
+end;
+
+function TCaixa.AdicionarValor(const aValor: Double): Double;
+begin
+  if FCaixaAberto = False then
+  begin
+    raise Exception.Create('Precisa abrir o caixa.');
+  end;
+
+  FSaldoAtual := FSaldoAtual + aValor;
+end;
+
+function TCaixa.RetirarValor(const aValor: Double): Double;
+begin
+  if FCaixaAberto = False then
+  begin
+    raise Exception.Create('Precisa abrir o caixa.');
+  end;
+
+  FSaldoAtual := FSaldoAtual - aValor;
+end;
+
+function TCaixa.FecharCaixa: Boolean;
+begin
+  if FCaixaAberto = False then
+  begin
+    raise Exception.Create('Precisa abrir o caixa.');
+  end;
+end;
+
+end.
