@@ -24,7 +24,6 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure BT_ExecutarClick(Sender: TObject);
     procedure BT_ExibirClick(Sender: TObject);
-    procedure BT_SairClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -84,11 +83,6 @@ procedure TForm2.BT_ExibirClick(Sender: TObject);
     MMBox.Visible := true;
     mmbox.Lines := FCaixa.Stringlist;
   end;
-
-procedure TForm2.BT_SairClick(Sender: TObject);
-begin
-Application.Terminate;
-end;
 
 procedure TForm2.FormClose(Sender: TObject; var Action: TCloseAction);
 begin

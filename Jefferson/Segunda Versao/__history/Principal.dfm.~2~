@@ -2,8 +2,8 @@ object Form2: TForm2
   Left = 0
   Top = 0
   Caption = 'Caixa do Supermercado'
-  ClientHeight = 344
-  ClientWidth = 546
+  ClientHeight = 334
+  ClientWidth = 514
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -5498,7 +5498,6 @@ object Form2: TForm2
     Height = 25
     Caption = 'Sair da Aplica'#231#227'o'
     TabOrder = 4
-    OnClick = BT_SairClick
   end
   object MMBox: TMemo
     Left = 202
