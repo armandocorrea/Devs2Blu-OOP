@@ -66,6 +66,9 @@ begin
     if not (TryStrToFloat(edtValor.Text, xSaldoInicialPassado)) then
      raise Exception.Create('O Valor Para abrir o Caixa é inválido');
 
+     if (xSaldoInicialPassado < 0) then
+    raise Exception.Create('Número Inválido');
+
      Self.CriarCaixa(xSaldoInicialPassado);
      FHistoricosOprecoes := TStringList.Create;
   end
@@ -74,6 +77,7 @@ begin
 
   if (FCaixa.Caixa_Aberto) then
     raise Exception.Create('O Caixa Já está Aberto');
+
 
     FCaixa.AbrirCaixa;
     lblResultado.Caption := 'Caixa Aberto Com '+FormatFloat('0.00',FCaixa.Saldo_Inicial)+'R$';
