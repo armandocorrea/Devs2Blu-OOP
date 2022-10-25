@@ -5498,7 +5498,6 @@ object Form2: TForm2
     Height = 25
     Caption = 'Sair da Aplica'#231#227'o'
     TabOrder = 4
-    OnClick = BT_SairClick
   end
   object MMBox: TMemo
     Left = 202
