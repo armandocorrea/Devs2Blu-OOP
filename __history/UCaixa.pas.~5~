@@ -49,7 +49,6 @@ function TCaixa.AdicionarValor(aValorAdicionado: Double): Double;
 begin
   if aValorAdicionado < 0 then
     raise Exception.Create('Digite um valor maior que 0');
-
   SaldoFinal := (SaldoFinal + aValorAdicionado);
   result     := SaldoFinal;
 end;

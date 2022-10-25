@@ -47,9 +47,6 @@ end;
 
 function TCaixa.AdicionarValor(aValorAdicionado: Double): Double;
 begin
-  if aValorAdicionado < 0 then
-    raise Exception.Create('Digite um valor maior que 0');
-
   SaldoFinal := (SaldoFinal + aValorAdicionado);
   result     := SaldoFinal;
 end;
@@ -74,10 +71,9 @@ end;
 function TCaixa.RetirarValor(aValorRetirada: Double): Double;
 begin
   if aValorRetirada > SaldoFinal then
-    raise Exception.Create('Não é possível retirar mais do que há no caixa');
-
+  raise Exception.Create('Não é possível retirar mais do que há no caixa');
   SaldoFinal := SaldoFinal - aValorRetirada;
-  result     := SaldoFinal;
+  result := SaldoFinal;
 end;
 
 function TCaixa.GetCaixaAberto: Boolean;
