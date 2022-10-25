@@ -77,8 +77,10 @@ begin
 
     FCaixa.AbrirCaixa;
     lblResultado.Caption := 'Caixa Aberto Com '+FormatFloat('0.00',FCaixa.Saldo_Inicial)+'R$';
-    lblCaixa.Caption := FormatFloat('0.00',xSaldoInicialPassado)+'R$';
+    
     FHistoricosOprecoes.Add('O Caixa Foi Aberto Com '+FormatFloat('0.00',FCaixa.Saldo_Inicial)+'R$');
+
+   lblCaixa.Caption := '+'+FormatFloat('0.00',xSaldoInicialPassado)+'R$';
 end;
 
 
@@ -134,8 +136,11 @@ procedure TfrmPrincipal.ExibirHistoricoOperecoes;
 var
   I : Integer;
 begin
-  mmOperacoes.Visible := True;
-  Image1.Visible      := False;
+  if (FCaixa = nil) then
+    raise Exception.Create('Caixa Não Iniciado');
+
+    mmOperacoes.Visible := True;
+    Image1.Visible      := False;
   for I := 0 to FHistoricosOprecoes.Count-1 do
    mmOperacoes.Lines.Add(FHistoricosOprecoes[I]);
 end;
@@ -147,18 +152,19 @@ begin
     raise Exception.Create('O Caixa Não Iniciado!');
 
   if not (FCaixa.Caixa_Aberto) then
-    raise Exception.Create('O Caixa Não está Aberto Para essa Operação!');
+    raise Exception.Create('O Caixa Já está Fechado!');
 
   FCaixa.FecharCaixa;
   lblValor.Enabled := False;
   edtValor.Enabled := False;
-   FHistoricosOprecoes.Add('O Caixa Foi Fechado Com '+FormatFloat('0.00',FCaixa.Saldo_Atual)+' R$');
+  FHistoricosOprecoes.Add('O Caixa Foi Fechado Com '+FormatFloat('0.00',FCaixa.Saldo_Atual)+' R$');
   lblResultado.Caption := 'O Caixa Foi Fechado!';
 end;
 
 procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   FreeAndNil(FCaixa);
+  FreeAndNil(FHistoricosOprecoes);
 end;
 
 procedure TfrmPrincipal.Liberar;
@@ -213,13 +219,14 @@ begin
     raise Exception.Create('O Valor Informado é Inválido!');
 
   if not (xValorSangria <= FCaixa.Saldo_Atual) then
-    raise Exception.Create('O Valor Informado é Maior Que o Saldo Atual Do Caixa!');
+    raise Exception.Create('O Valor Informado é Maior Que o Saldo Atual Do Caixa Para Retirar!');
 
 
    FCaixa.RetirarValor(xValorSangria);
-   lblCaixa.Caption := FormatFloat('0.00',xValorSangria)+'R$';
    FHistoricosOprecoes.Add('Retirado '+ FormatFloat('0.00',xValorSangria) + ' R$ do Caixa!');
-   lblResultado.Caption := 'Foi Retirado '+ FormatFloat('0.00',xValorSangria) + ' de Suprimentos do Caixa!'
+   lblResultado.Caption := 'Foi Retirado '+ FormatFloat('0.00',xValorSangria) + ' de Suprimentos do Caixa!';
+
+   lblCaixa.Caption := '- '+FormatFloat('0.00',xValorSangria)+'R$';
 end;
 
 procedure TfrmPrincipal.SuprimentoOp;
@@ -235,13 +242,13 @@ begin
   if not (TryStrToFloat(edtValor.Text,xValor)) then
     raise Exception.Create('O Valor Informado é Inválido');
 
-  if not (xValor >= FCaixa.Saldo_Atual) then
+  if not (xValor > 0) then
     raise Exception.Create('O Valor Informado é Menor Que o Saldo Atual Do Caixa!');
 
   FCaixa.AdicionarValor(xValor);
-  lblCaixa.Caption := FormatFloat('0.00',xValor)+'R$';
   FHistoricosOprecoes.Add('Adicionado '+ FormatFloat('0.00', xValor)+'R$ ao Caixa!');
-  lblResultado.Caption := 'Foi Adicionado '+ FormatFloat('0.00',xValor) + ' de Suprimentos ao Caixa!'
+  lblResultado.Caption := 'Foi Adicionado '+ FormatFloat('0.00',xValor) + ' de Suprimentos ao Caixa!';
+ lblCaixa.Caption := '+ '+FormatFloat('0.00',xValor)+'R$';
 end;
 
 end.

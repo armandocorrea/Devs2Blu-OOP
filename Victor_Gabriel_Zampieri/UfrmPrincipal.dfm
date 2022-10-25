@@ -969,14 +969,14 @@ object frmPrincipal: TfrmPrincipal
       1CB1924B06DB1F0000000049454E44AE426082}
   end
   object lblCaixa: TLabel
-    Left = 392
+    Left = 384
     Top = 184
-    Width = 66
-    Height = 21
+    Width = 41
+    Height = 11
     Caption = '0.00 R$'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clLime
-    Font.Height = -17
+    Font.Height = -9
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
@@ -986,6 +986,7 @@ object frmPrincipal: TfrmPrincipal
     Top = 8
     Width = 424
     Height = 433
+    ReadOnly = True
     TabOrder = 5
     Visible = False
   end
