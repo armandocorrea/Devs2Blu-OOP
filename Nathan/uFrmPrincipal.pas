@@ -19,6 +19,7 @@ type
     mmHistorico: TMemo;
     lblCaixa: TLabel;
     Image1: TImage;
+    Label2: TLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnExecutarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);

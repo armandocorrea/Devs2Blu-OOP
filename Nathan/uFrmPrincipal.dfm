@@ -2746,6 +2746,19 @@ object frmPrincipal: TfrmPrincipal
       43F1F9FF6AEC0000000049454E44AE426082}
     Stretch = True
   end
+  object Label2: TLabel
+    Left = 176
+    Top = 8
+    Width = 65
+    Height = 13
+    Caption = '+DEVS2BLU'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object edtValor: TEdit
     Left = 58
     Top = 45
