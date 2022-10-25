@@ -88,7 +88,7 @@ begin
     raise Exception.Create(' O Caixa não foi aberto !! ');
 
   CaixaAberto := false;
-
+  FHistorico.Add( 'Caixa Fechado com : ' +CurrToStr(SaldoAtual));
 end;
 
 function TCaixa.GetCaixaAberto: Boolean;
