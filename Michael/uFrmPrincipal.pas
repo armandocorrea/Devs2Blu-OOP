@@ -95,14 +95,12 @@ begin
       begin
         lbResultado.caption := (' Saldo : ' +CurrToStr(FCaixa.SaldoAtual));
         self.confirmacao;edtValor.Enabled := True;;
-        edtValor.Enabled := false;
       end;
 
     tpFecharCaixa:
       begin
         FCaixa.FecharCaixa;
         self.confirmacao;
-        edtValor.Enabled := false;
       end;
   end;
 
