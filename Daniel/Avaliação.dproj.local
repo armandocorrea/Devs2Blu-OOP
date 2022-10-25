@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/10/24 18:47:25.650,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:47:41.210,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Avaliação.dproj=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/10/24 18:47:55.645,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UfrmPrincipal.dfm=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/24 18:47:55.645,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UfrmPrincipal.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:48:01.199,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:48:07.071,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UCaixa.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:49:32.570,=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:49:50.965,C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UStringList.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 21:09:37.434,C:\Users\dtlsilva\Documents\Devs2Blu-OOP\Daniel\UfrmPrincipal.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UfrmPrincipal.pas</Transaction>
+    <Transaction>2022/10/24 21:09:37.434,C:\Users\dtlsilva\Documents\Devs2Blu-OOP\Daniel\UfrmPrincipal.dfm=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UfrmPrincipal.dfm</Transaction>
+    <Transaction>2022/10/24 21:09:38.800,C:\Users\dtlsilva\Documents\Devs2Blu-OOP\Daniel\UCaixa.pas=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\UCaixa.pas</Transaction>
+    <Transaction>2022/10/24 21:09:40.238,C:\Users\dtlsilva\Documents\Devs2Blu-OOP\Daniel\Avaliação.dproj=C:\Users\dtlsilva\Documents\Embarcadero\Studio\Projects\Avaliação.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
