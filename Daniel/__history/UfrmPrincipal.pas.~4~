@@ -28,7 +28,7 @@ type
     procedure btnSairClick(Sender: TObject);
   private
     fCaixa: TCaixa;
-
+    fOperacoes: TStringList;
     procedure UltimaOp(operacao: string; resultado: string = '');
     procedure LimpaMemo;
     procedure Executar;
@@ -101,13 +101,13 @@ procedure TfrmCaixa.ExibeOp;
 var
   I: Integer;
 begin
-  if fCaixa.OPeracoes.count = 0 then
+  if fOPeracoes.count = 0 then
     exit;
   imgCaixa.Visible := false;
   mmOperacoes.Visible := true;
-  for I := 0 to fCaixa.Operacoes.Count-1 do
+  for I := 0 to fOperacoes.Count-1 do
   begin
-    mmOperacoes.Lines.Add(fCaixa.Operacoes.Strings[i]);
+    mmOperacoes.Lines.Add(fOperacoes.Strings[i]);
   end;
 
 end;
@@ -124,11 +124,13 @@ end;
 procedure TfrmCaixa.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   FreeAndNil(fCaixa);
+  FreeAndNil(fOperacoes);
 end;
 
 procedure TfrmCaixa.FormCreate(Sender: TObject);
 begin
   fCaixa := TCaixa.Create;
+  fOperacoes := TStringList.Create;
 end;
 
 procedure TfrmCaixa.LimpaMemo;
@@ -185,7 +187,7 @@ procedure TfrmCaixa.UltimaOp(operacao: string; resultado: string = '');
 begin
   lblResultado.Caption := operacao + resultado;
   edtValor.Text := '';
-  fCaixa.Operacoes.Add(lblResultado.Caption);
+  fOperacoes.Add(lblResultado.Caption);
   LimpaMemo;
 end;
 

@@ -3,7 +3,7 @@ unit UCaixa;
 interface
 
 uses
-System.SysUtils, System.Classes;
+System.SysUtils;
 
 type
 
@@ -12,18 +12,13 @@ TCaixa = class
     fSaldoInicial: Double;
     fSaldoAtual: Double;
     fCaixaAberto: boolean;
-    fOperacoes: TStringList;
     function getCaixaAberto: boolean;
     function getSaldoAtual: double;
     function getSaldoInicial: double;
-    function getOperacoes: TStringList;
   public
-    property Operacoes: TStringList read getOperacoes;
     property SaldoInicial: double read getSaldoInicial;
     property SaldoAtual: double read getSaldoAtual;
     property CaixaAberto: boolean read getCaixaAberto;
-    constructor Create;
-    destructor Destroy; override;
     procedure ChecaCaixaAberto;
     procedure ChecaCaixaFechado;
     procedure ChecaValor(pValorVerificado: double);
@@ -71,17 +66,6 @@ begin
     raise Exception.Create('Erro. Valor inválido');
 end;
 
-constructor TCaixa.Create;
-begin
-  FOperacoes := TStringList.Create;
-end;
-
-destructor TCaixa.Destroy;
-begin
-  freeAndNil(fOperacoes);
-  inherited;
-end;
-
 procedure TCaixa.FechaCaixa;
 begin
   ChecaCaixaFechado;
@@ -91,11 +75,6 @@ end;
 function TCaixa.getCaixaAberto: boolean;
 begin
   Result := fCaixaAberto;
-end;
-
-function TCaixa.getOperacoes: TStringList;
-begin
-  Result := fOperacoes;
 end;
 
 function TCaixa.getSaldoAtual: double;
