@@ -118,6 +118,7 @@ begin
   edtValor.Enabled := false;
   UltimaOP('Caixa fechado. Saldo final: ', formatFloat('R$ 0.00',fCaixa.SaldoAtual));
   mmOperacoes.Lines.Add('');
+  FreeAndNil(fCaixa);
 end;
 
 procedure TfrmCaixa.FormClose(Sender: TObject; var Action: TCloseAction);
