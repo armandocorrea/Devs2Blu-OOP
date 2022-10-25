@@ -1,0 +1,48 @@
+unit Principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Vcl.Imaging.pngimage, UCaixa;
+
+type
+  TenumOper = (StAbrir, stSuprir, stSacar, stSaldo, stfechar);
+  TForm2 = class(TForm)
+    LB_Valor: TLabel;
+    EDT_Valor: TEdit;
+    RDGroup: TRadioGroup;
+    BT_Executar: TButton;
+    BT_Exibir: TButton;
+    BT_Sair: TButton;
+    LB_Resultado: TLabel;
+    Image1: TImage;
+    MMBox: TMemo;
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    FCaixa : TCaixa;
+
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+FreeAndNil(Fcaixa);
+end;
+
+procedure TForm2.FormCreate(Sender: TObject);
+begin
+   Fcaixa := Tcaixa.create;
+end;
+
+end.
