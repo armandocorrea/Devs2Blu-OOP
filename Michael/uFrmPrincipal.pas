@@ -28,6 +28,7 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnExibirClick(Sender: TObject);
     procedure btnSairClick(Sender: TObject);
+    procedure edtValorKeyPress(Sender: TObject; var Key: Char);
   private
     FCaixa : TCaixa;
     procedure CaixaMerdado;
@@ -93,7 +94,7 @@ begin
     tpSaldo:
       begin
         lbResultado.caption := (' Saldo : ' +CurrToStr(FCaixa.SaldoAtual));
-        self.confirmacao;
+        self.confirmacao;edtValor.Enabled := True;;
         edtValor.Enabled := false;
       end;
 
@@ -117,6 +118,13 @@ end;
 procedure TForm1.confirmacao;
 begin
   ShowMessage('Operação Realizada.');
+end;
+
+procedure TForm1.edtValorKeyPress(Sender: TObject; var Key: Char);
+begin
+  if not (key in ['0'..'9', ',', '.', #8])  then
+   Key:= #0;
+
 end;
 
 procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);

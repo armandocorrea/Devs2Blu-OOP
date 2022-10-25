@@ -49,8 +49,8 @@ object Form1: TForm1
       ParentFont = False
     end
     object Label3: TLabel
-      Left = 7
-      Top = 85
+      Left = 5
+      Top = 80
       Width = 43
       Height = 16
       Caption = 'Valor :'
@@ -157,20 +157,20 @@ object Form1: TForm1
     Font.Height = -13
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
-    NumbersOnly = True
     ParentFont = False
     TabOrder = 4
+    OnKeyPress = edtValorKeyPress
   end
   object Panel1: TPanel
     Left = 8
-    Top = 455
+    Top = 459
     Width = 617
     Height = 26
     TabOrder = 5
     object lbResultado: TLabel
       Left = 28
       Top = 4
-      Width = 157
+      Width = 34
       Height = 16
       Caption = 'Caixa'
       Font.Charset = DEFAULT_CHARSET

@@ -3,7 +3,7 @@ program Prova;
 uses
   Vcl.Forms,
   uFrmPrincipal in 'uFrmPrincipal.pas' {Form1},
-  Caixa in 'Caixa.pas';
+  uCaixa in 'uCaixa.pas';
 
 {$R *.res}
 

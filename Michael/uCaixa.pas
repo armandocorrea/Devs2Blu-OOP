@@ -13,15 +13,15 @@ uses
       FCaixaAberto  : Boolean;
       FHistorico : TStringList;
 
-    function GetCaixaAberto: Boolean;
-    function GetSaldoAtual: currency;
-    function GetSaldoInicial: currency;
+      function GetCaixaAberto: Boolean;
+      function GetSaldoAtual: currency;
+      function GetSaldoInicial: currency;
 
-    procedure SetCaixaAberto(const Value: Boolean);
-    procedure SetSaldoAtual(const Value: currency);
-    procedure SetSaldoInicial(const Value: currency);
-    function GetHitorisco: TStringList;
-    procedure SetHistorico(const Value: TStringList);
+      procedure SetCaixaAberto(const Value: Boolean);
+      procedure SetSaldoAtual(const Value: currency);
+      procedure SetSaldoInicial(const Value: currency);
+      function GetHitorisco: TStringList;
+      procedure SetHistorico(const Value: TStringList);
 
     public
 
