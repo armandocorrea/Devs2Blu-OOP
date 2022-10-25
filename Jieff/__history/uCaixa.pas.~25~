@@ -1,0 +1,103 @@
+unit uCaixa;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
+  uCaixaClass, Vcl.Imaging.pngimage, Vcl.Imaging.jpeg, System.Classes;
+
+type
+  TEnumCaixa =(stAbrirCaixa, stSuprimento, stSangria, stSaldoAtual, stFecharCaixa);
+  TfrmCaixa = class(TForm)
+    edtValor: TEdit;
+    Label1: TLabel;
+    rgOpcoes: TRadioGroup;
+    btnExe: TButton;
+    btnExibir: TButton;
+    btnSair: TButton;
+    Panel1: TPanel;
+    lblResultado: TLabel;
+    memo: TMemo;
+    Image1: TImage;
+    procedure btnExeClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    xCaixa : TCaixa;
+  end;
+
+var
+  frmCaixa: TfrmCaixa;
+
+implementation
+
+uses
+ // System.Classes;
+
+{$R *.dfm}
+
+procedure TfrmCaixa.btnExeClick(Sender: TObject);
+var
+  xValor: double;
+  xList : TStringList;
+begin
+
+  xValor := StrToFloat(edtValor.Text);
+
+  try
+    case TEnumCaixa(rgOpcoes.ItemIndex) of
+      stAbrirCaixa:
+      begin
+        xCaixa.abrirCaixa(true);
+        lblResultado.Caption := ('Caixa Aberto');
+        //xList.add(lblResultado.Caption);
+        //memo.Lines.add(xList);
+      end;
+        stSuprimento:
+      begin
+        xCaixa.adicionarDinheiro(xValor);
+        lblResultado.Caption := ('Saldo adicionado, atualizado R$: ' + FloatToStr(xCaixa.saldoAtual));
+      end;
+      stSangria:
+      begin
+        xCaixa.retirarDinheiro(xValor);
+        lblResultado.Caption := ('Saldo retirado, atualizado R$: ' + FloatToStr(xCaixa.saldoAtual));
+      end;
+      stSaldoAtual:
+      begin
+        xCaixa.exibirSaldoAtual(xValor);
+        lblResultado.Caption := ('Saldo atual R$: ' + FloatToStr(xCaixa.saldoAtual));
+      end;
+      stFecharCaixa:
+      begin
+        xCaixa.fecharCaixa(false);
+        lblResultado.Caption := ('Caixa Fechado');
+      end;
+
+    end;
+
+  finally
+    FreeAndNil(xList);
+  end;
+
+end;
+
+
+procedure TfrmCaixa.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+ FreeAndNil(xCaixa);
+end;
+
+procedure TfrmCaixa.FormCreate(Sender: TObject);
+begin
+  xCaixa:= TCaixa.Create;
+end;
+
+
+
+
+end.

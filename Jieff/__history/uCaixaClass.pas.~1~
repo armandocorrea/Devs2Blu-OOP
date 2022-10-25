@@ -1,0 +1,65 @@
+unit uCaixaClass;
+
+interface
+
+type
+
+  TCaixa = class
+
+    private
+
+      FSaldoInicial : double;
+      FSaldoFinal : double;
+      FCaixaAberto : boolean;
+
+      function getCaixaAberto: boolean;
+      function getSaldoFinal: double;
+      function getSaldoInicial: double;
+
+      procedure setCaixaAberto(const Value: boolean);
+      procedure setSaldoFinal(const Value: double);
+      procedure setSaldoInicial(const Value: double);
+
+    public
+
+      property saldoIncial : double read getSaldoInicial write setSaldoInicial;
+      property saldoFinal : double read getSaldoFinal write setSaldoFinal;
+      property caixaAberto : boolean read getCaixaAberto write setCaixaAberto;
+
+  end;
+
+implementation
+
+{ TCaixa }
+
+function TCaixa.getCaixaAberto: boolean;
+begin
+  Result := FCaixaAberto;
+end;
+
+function TCaixa.getSaldoFinal: double;
+begin
+  Result := FSaldoFinal;
+end;
+
+function TCaixa.getSaldoInicial: double;
+begin
+  Result := FSaldoInicial;
+end;
+
+procedure TCaixa.setCaixaAberto(const Value: boolean);
+begin
+  FCaixaaberto := Value;
+end;
+
+procedure TCaixa.setSaldoFinal(const Value: double);
+begin
+  FSaldoFinal := Value;
+end;
+
+procedure TCaixa.setSaldoInicial(const Value: double);
+begin
+  FSaldoInicial := Value;
+end;
+
+end.
