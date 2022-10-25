@@ -3435,7 +3435,6 @@ object frmCaixa: TfrmCaixa
     Height = 25
     Caption = 'Sair da Aplica'#231#227'o'
     TabOrder = 4
-    OnClick = btnSairClick
   end
   object mmOperacoes: TMemo
     Left = 207

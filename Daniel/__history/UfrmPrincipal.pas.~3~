@@ -25,7 +25,6 @@ type
     procedure btnExecutarClick(Sender: TObject);
     procedure btnExibirClick(Sender: TObject);
     procedure RGOpcoesClick(Sender: TObject);
-    procedure btnSairClick(Sender: TObject);
   private
     fCaixa: TCaixa;
     fOperacoes: TStringList;
@@ -72,11 +71,6 @@ end;
 procedure TfrmCaixa.btnExibirClick(Sender: TObject);
 begin
   ExibeOp;
-end;
-
-procedure TfrmCaixa.btnSairClick(Sender: TObject);
-begin
-  Self.Close;
 end;
 
 procedure TfrmCaixa.Executar;
