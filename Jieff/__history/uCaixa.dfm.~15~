@@ -1193,7 +1193,6 @@ object frmCaixa: TfrmCaixa
     Height = 25
     Caption = 'Exibir Opera'#231#245'es'
     TabOrder = 3
-    OnClick = btnExibirClick
   end
   object btnSair: TButton
     Left = 32
@@ -1202,7 +1201,6 @@ object frmCaixa: TfrmCaixa
     Height = 25
     Caption = 'Sair da Aplica'#231#227'o'
     TabOrder = 4
-    OnClick = btnSairClick
   end
   object Panel1: TPanel
     Left = 0

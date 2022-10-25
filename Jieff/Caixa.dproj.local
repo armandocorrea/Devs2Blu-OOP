@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>2022/10/24 18:52:06.760,=C:\Users\jieffn\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/10/24 19:05:52.573,C:\Users\jieffn\Documents\Delphi2Blu2022\Jieff\Jieff\Caixa.dproj=C:\Users\jieffn\Documents\Embarcadero\Studio\Projects\Project17.dproj</Transaction>
-    <Transaction>2022/10/24 19:06:23.109,C:\Users\jieffn\Documents\Delphi2Blu2022\Jieff\Jieff\uCaixa.pas=C:\Users\jieffn\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/10/24 19:06:23.109,C:\Users\jieffn\Documents\Delphi2Blu2022\Jieff\Jieff\uCaixa.dfm=C:\Users\jieffn\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2022/10/24 19:07:22.210,=C:\Users\jieffn\Documents\Delphi2Blu2022\Jieff\Jieff\Unit1.pas</Transaction>
-    <Transaction>2022/10/24 19:17:05.539,C:\Users\jieffn\Documents\Delphi2Blu2022\Jieff\Jieff\uCaixaClass.pas=C:\Users\jieffn\Documents\Delphi2Blu2022\Jieff\Jieff\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:52:06.000.760,=C:\Users\jieffn\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 19:05:52.000.573,C:\Users\jieffn\Documents\Embarcadero\Studio\Projects\Project17.dproj=C:\Users\jieffn\Documents\Delphi2Blu2022\Jieff\Jieff\Caixa.dproj</Transaction>
+    <Transaction>2022/10/24 19:06:23.000.109,C:\Users\jieffn\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\jieffn\Documents\Delphi2Blu2022\Jieff\Jieff\uCaixa.pas</Transaction>
+    <Transaction>2022/10/24 19:06:23.000.109,C:\Users\jieffn\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\jieffn\Documents\Delphi2Blu2022\Jieff\Jieff\uCaixa.dfm</Transaction>
+    <Transaction>2022/10/24 19:07:22.000.210,=C:\Users\jieffn\Documents\Delphi2Blu2022\Jieff\Jieff\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 19:17:05.000.539,C:\Users\jieffn\Documents\Delphi2Blu2022\Jieff\Jieff\Unit1.pas=C:\Users\jieffn\Documents\Delphi2Blu2022\Jieff\Jieff\uCaixaClass.pas</Transaction>
   </Transactions>
 </BorlandProject>
