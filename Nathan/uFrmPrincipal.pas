@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, uCaixa,
-  Vcl.Imaging.jpeg;
+  Vcl.Imaging.jpeg, Vcl.Imaging.pngimage;
 
 type
   TOpcoes = (tpAbrirCaixa, tpSuprimento, tpSangria, tpSaldoAtual, tpFecharCaixa);
@@ -23,10 +23,12 @@ type
     procedure btnExecutarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnSairClick(Sender: TObject);
+    procedure btnExibirClick(Sender: TObject);
   private
     FCaixa: TCaixa;
     procedure ExecutarOpcao;
     procedure Fechar;
+    procedure Lista;
   public
     { Public declarations }
   end;
@@ -44,17 +46,29 @@ begin
   ExecutarOpcao;
 end;
 
+//Botao StringList
+procedure TfrmPrincipal.btnExibirClick(Sender: TObject);
+begin
+  Lista;
+end;
+
+//Botao Fechar
+procedure TfrmPrincipal.btnSairClick(Sender: TObject);
+begin
+  Fechar;
+end;
+
 //Procedure para as opções escolhidas no RadioGroup
 procedure TfrmPrincipal.ExecutarOpcao;
 var
   xValor: Double;
 begin
-  //Validar se é numero
+  //Validar se é número
   if not TryStrToFloat(edtValor.Text, xValor) then
     raise Exception.Create('Valor Inválido');
 
   case TOpcoes(rgOpcoes.ItemIndex) of
-    tpAbrirCaixa://Caso opte por abrir o caixa
+    tpAbrirCaixa://Caso escolha por abrir o caixa
     begin
       if FCaixa.CaixaAberto = true then
         lblCaixa.Caption := 'O Caixa já está aberto!'
@@ -63,11 +77,11 @@ begin
         begin
           FCaixa.AbrirCaixa(StrToInt(edtValor.Text));
 
-          lblCaixa.Caption := 'Caixa Aberto! Saldo Inicial: RS' + FloatToStr(FCaixa.SaldoInicial);
+          lblCaixa.Caption := 'Caixa Aberto! Saldo Inicial: R$' + FloatToStr(FCaixa.SaldoInicial);
         end;
     end;
 
-    tpSuprimento://Caso opte por adicionar dinheiro
+    tpSuprimento://Caso escolha por adicionar dinheiro
     begin
        if FCaixa.CaixaAberto = false then
         lblCaixa.Caption := 'O Caixa está fechado!'
@@ -79,7 +93,7 @@ begin
          end;
     end;
 
-    tpSangria://Caso opte por tirar dinheiro
+    tpSangria://Caso escolha por tirar dinheiro
     begin
        if FCaixa.CaixaAberto = false then
         lblCaixa.Caption := 'O Caixa está fechado!'
@@ -91,32 +105,43 @@ begin
          end;
     end;
 
-    tpSaldoAtual://Caso opte por mostrar o saldo atual
+    tpSaldoAtual://Caso escolha por mostrar o saldo atual
     begin
       if FCaixa.CaixaAberto = false then
         lblCaixa.Caption := 'O Caixa está fechado!'
+
       else
         begin
           label1.Enabled := False;
           edtValor.Enabled := False;
 
-          mmHistorico.Lines.Add('Saldo Atual: R$' + FloatToStr(FCaixa.SaldoAtual));
+          lblCaixa.Caption := 'Saldo Atual R$:' + FloatToStr(FCaixa.SaldoAtual);
         end;
     end;
 
-    tpFecharCaixa: //Caso opte por fechar o caixa
+    tpFecharCaixa: //Caso escolha por fechar o caixa
     begin
       if FCaixa.CaixaAberto = false then
         lblCaixa.Caption := 'O Caixa está fechado!'
+
       else
         begin
-          label1.Enabled := False;
-          edtValor.Enabled := False;
+          label1.Enabled := False;  //Trancar usabilidade
+          edtValor.Enabled := False; //Trancar usabilidade
 
-          lblCaixa.Caption := 'Você fechou o caixa!';
+          FCaixa.FecharCaixa;
+
+          lblCaixa.Caption := 'Você fechou o caixa com um saldo de R$:' + FloatToStr(FCaixa.SaldoAtual);
         end;
     end;
   end;
+end;
+
+//procedure para listar (bonus)
+procedure TfrmPrincipal.Lista;
+begin
+  mmhistorico.Visible := true;
+  mmHistorico.Lines := FCaixa.metodoListar;
 end;
 
 //procedure para fechar aplicação
@@ -135,12 +160,6 @@ end;
 procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   FreeAndNil(FCaixa);
-end;
-
-//Botao Fechar
-procedure TfrmPrincipal.btnSairClick(Sender: TObject);
-begin
-  Fechar;
 end;
 
 end.
