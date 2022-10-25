@@ -76,7 +76,8 @@ begin
     raise Exception.Create('O Caixa Já está Aberto');
 
     FCaixa.AbrirCaixa;
-    lblResultado.Caption := 'Caixa Aberto!';
+    lblResultado.Caption := 'Caixa Aberto Com '+FormatFloat('0.00',FCaixa.Saldo_Inicial)+'R$';
+    lblCaixa.Caption := FormatFloat('0.00',xSaldoInicialPassado)+'R$';
     FHistoricosOprecoes.Add('O Caixa Foi Aberto Com '+FormatFloat('0.00',FCaixa.Saldo_Inicial)+'R$');
 end;
 
