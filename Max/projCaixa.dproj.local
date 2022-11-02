@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/12 20:47:44.000.693,=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/09/21 20:12:01.000.895,=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/18 21:36:54.000.683,=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/24 19:08:54.000.684,=C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/24 19:09:16.000.484,C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\mmfurtado\Documents\Devs2Blu-OOP\Max\frmCaixa.dfm</Transaction>
+    <Transaction>2022/10/24 19:09:16.000.484,C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\mmfurtado\Documents\Devs2Blu-OOP\Max\frmCaixa.pas</Transaction>
+    <Transaction>2022/10/24 19:09:23.000.502,C:\Users\mmfurtado\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\mmfurtado\Documents\Devs2Blu-OOP\Max\projCaixa.dproj</Transaction>
+    <Transaction>2022/10/24 19:09:28.000.297,=C:\Users\mmfurtado\Documents\Devs2Blu-OOP\Max\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 19:09:33.000.922,C:\Users\mmfurtado\Documents\Devs2Blu-OOP\Max\Unit1.pas=C:\Users\mmfurtado\Documents\Devs2Blu-OOP\Max\UCaixa.pas</Transaction>
+  </Transactions>
+</BorlandProject>

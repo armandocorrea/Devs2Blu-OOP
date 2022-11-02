@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/26 19:24:20.000.960,=C:\Users\nagoncalves\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/30 18:21:56.000.525,=C:\Users\nagoncalves\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:48:22.000.899,=C:\Users\nagoncalves\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:49:32.000.278,=C:\Users\nagoncalves\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/24 18:49:50.000.001,C:\Users\nagoncalves\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\nagoncalves\Documents\Devs2Blu-OOP\Nathan\uFrmPrincipal.dfm</Transaction>
+    <Transaction>2022/10/24 18:49:50.000.001,C:\Users\nagoncalves\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\nagoncalves\Documents\Devs2Blu-OOP\Nathan\uFrmPrincipal.pas</Transaction>
+    <Transaction>2022/10/24 18:50:07.000.626,C:\Users\nagoncalves\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\nagoncalves\Documents\Devs2Blu-OOP\Nathan\uCaixa.pas</Transaction>
+    <Transaction>2022/10/24 18:50:41.000.059,C:\Users\nagoncalves\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\nagoncalves\Documents\Devs2Blu-OOP\Nathan\CaixaDevs2Blu.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

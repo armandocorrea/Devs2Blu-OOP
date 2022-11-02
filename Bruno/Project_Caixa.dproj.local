@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/24 18:50:30.000.813,=C:\Users\bcmsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:51:00.000.439,=C:\Users\bcmsilva\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/24 18:51:23.000.219,C:\Users\bcmsilva\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\bcmsilva\Documents\Devs2Blu-OOP\Bruno\UCaixa.pas</Transaction>
+    <Transaction>2022/10/24 18:51:38.000.296,C:\Users\bcmsilva\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\bcmsilva\Documents\Devs2Blu-OOP\Bruno\Ufrm_principal.pas</Transaction>
+    <Transaction>2022/10/24 18:51:38.000.296,C:\Users\bcmsilva\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\bcmsilva\Documents\Devs2Blu-OOP\Bruno\Ufrm_principal.dfm</Transaction>
+    <Transaction>2022/10/24 18:58:34.000.605,C:\Users\bcmsilva\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\bcmsilva\Documents\Devs2Blu-OOP\Bruno\Project_Caixa.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

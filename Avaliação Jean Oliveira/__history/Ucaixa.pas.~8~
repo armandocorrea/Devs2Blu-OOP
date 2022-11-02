@@ -1,0 +1,96 @@
+unit Ucaixa;
+
+interface
+
+
+
+
+Type
+
+  Tcaixa = class
+
+  private
+
+    fSaldoInicial, fSaldoAtual: double;
+    fCaixaAberto: boolean;
+
+    procedure Setsaldoinicial(const Value: double);
+    function getsaldoinicial: double;
+    procedure SetSaldoatual(const Value: double);
+    function getSaldoatual: double;
+    procedure Setcaixaaberto(const Value: boolean);
+    function getcaixaaberto: boolean;
+
+    property saldoinicial: double read getsaldoinicial write Setsaldoinicial;
+    property Saldoatual: double read getSaldoatual write SetSaldoatual;
+    property caixaaberto: boolean read getcaixaaberto write Setcaixaaberto;
+  public
+
+    function abrircaixa(const abrircaixa: boolean): boolean;
+    function fecharCaixa(const fecharCaixa: boolean): boolean;
+    function retirarvalor(const retirarvalor: double): double;
+    function adicionarvalor(const adicionarvalor: double): double;
+  end;
+
+implementation
+
+{ Tcaixa }
+
+function Tcaixa.abrircaixa(const abrircaixa: boolean): boolean;
+
+begin
+  abrircaixa := caixaaberto;
+  raise Exception.Create('O caixa esta fechado');
+
+
+end;
+
+function Tcaixa.retirarvalor(const retirarvalor: double): double;
+begin
+retirarvalor :=
+ raise Exception.Create('Error Message');
+end;
+
+function Tcaixa.adicionarvalor(const adicionarvalor: double): double;
+begin
+ raise Exception.Create('Error Message');
+end;
+
+function Tcaixa.fecharCaixa(const fecharCaixa: boolean): boolean;
+begin
+ raise Exception.Create('Error Message');
+end;
+
+function Tcaixa.getcaixaaberto: boolean;
+begin
+  result := caixaaberto;
+end;
+
+function Tcaixa.getSaldoatual: double;
+begin
+  result := Saldoatual;
+end;
+
+function Tcaixa.getsaldoinicial: double;
+begin
+  result := saldoinicial;
+end;
+
+procedure Tcaixa.Setcaixaaberto(const Value: boolean);
+begin
+  fCaixaAberto := Value;
+end;
+
+procedure Tcaixa.SetSaldoatual(const Value: double);
+begin
+  fSaldoAtual := Value;
+end;
+
+procedure Tcaixa.Setsaldoinicial(const Value: double);
+begin
+  fSaldoInicial := Value;
+end;
+
+{ Tcaixa }
+
+end.
