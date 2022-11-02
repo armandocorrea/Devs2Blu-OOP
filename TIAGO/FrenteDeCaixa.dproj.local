@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/24 18:53:33.000.537,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:53:38.000.742,=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/24 18:54:30.000.157,C:\Users\tancleto\Documents\Devs2Blu-OOP\TIAGO\uCaixa.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/24 18:54:45.000.169,C:\Users\tancleto\Documents\Devs2Blu-OOP\TIAGO\uFrmPrincipal.pas=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:54:45.000.169,C:\Users\tancleto\Documents\Devs2Blu-OOP\TIAGO\uFrmPrincipal.dfm=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/24 18:55:02.000.464,C:\Users\tancleto\Documents\Devs2Blu-OOP\TIAGO\FrenteDeCaixa.dproj=C:\Users\tancleto\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
