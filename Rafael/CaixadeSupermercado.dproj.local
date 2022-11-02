@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/10/24 18:48:30.278,=C:\Users\rafcorrea\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:52:24.507,C:\Users\rafcorrea\Documents\Devs2Blu-OOP\Rafael\uFrmPrincipal.dfm=C:\Users\rafcorrea\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/24 18:52:24.507,C:\Users\rafcorrea\Documents\Devs2Blu-OOP\Rafael\uFrmPrincipal.pas=C:\Users\rafcorrea\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:52:36.416,C:\Users\rafcorrea\Documents\Devs2Blu-OOP\Rafael\CaixadeSupermercado.dproj=C:\Users\rafcorrea\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2022/10/24 18:52:42.917,=C:\Users\rafcorrea\Documents\Devs2Blu-OOP\Rafael\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:53:13.690,C:\Users\rafcorrea\Documents\Devs2Blu-OOP\Rafael\Caixa.pas=C:\Users\rafcorrea\Documents\Devs2Blu-OOP\Rafael\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

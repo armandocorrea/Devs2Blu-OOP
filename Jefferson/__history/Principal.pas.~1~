@@ -1,0 +1,34 @@
+unit Principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Vcl.Imaging.pngimage;
+
+type
+  TForm2 = class(TForm)
+    LB_Valor: TLabel;
+    EDT_Valor: TEdit;
+    RDGroup: TRadioGroup;
+    BT_Executar: TButton;
+    BT_Exibir: TButton;
+    BT_Sair: TButton;
+    LB_Resultado: TLabel;
+    Image1: TImage;
+    MMBox: TMemo;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+end.

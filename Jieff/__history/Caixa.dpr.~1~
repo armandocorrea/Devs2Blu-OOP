@@ -1,0 +1,14 @@
+program Caixa;
+
+uses
+  Vcl.Forms,
+  Unit1 in '..\..\..\Embarcadero\Studio\Projects\Unit1.pas' {frmCaixa};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmCaixa, frmCaixa);
+  Application.Run;
+end.

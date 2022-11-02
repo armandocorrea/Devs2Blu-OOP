@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/18 21:37:53.000.703,=C:\Users\craymundo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:44:33.000.508,=C:\Users\craymundo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:54:28.000.423,C:\Users\craymundo\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\craymundo\Documents\Devs2Blu-OOP\Carlos\UfrmPrincipal.dfm</Transaction>
+    <Transaction>2022/10/24 18:54:28.000.423,C:\Users\craymundo\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\craymundo\Documents\Devs2Blu-OOP\Carlos\UfrmPrincipal.pas</Transaction>
+    <Transaction>2022/10/24 18:55:27.000.799,C:\Users\craymundo\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\craymundo\Documents\Devs2Blu-OOP\Carlos\Carlos_CaixaProvaOOP.dproj</Transaction>
+    <Transaction>2022/10/24 19:20:01.000.140,=C:\Users\craymundo\Documents\Devs2Blu-OOP\Carlos\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 19:20:39.000.251,C:\Users\craymundo\Documents\Devs2Blu-OOP\Carlos\Unit1.pas=C:\Users\craymundo\Documents\Devs2Blu-OOP\Carlos\UCaixa.pas</Transaction>
+  </Transactions>
+</BorlandProject>

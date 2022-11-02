@@ -1,0 +1,179 @@
+unit UfrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, UCaixa;
+
+type
+  NOpcoes = (OPAbrir, OPSuplemento, OPSangria, OPSaldoAtual, OPFechar);
+
+  TfrmCaixa = class(TForm)
+    lblResultado: TLabel;
+    Label1: TLabel;
+    EdtValor: TEdit;
+    RGOpcoes: TRadioGroup;
+    btnExecutar: TButton;
+    btnExibir: TButton;
+    btnSair: TButton;
+    mmOperacoes: TMemo;
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btnExecutarClick(Sender: TObject);
+    procedure RGOpcoesClick(Sender: TObject);
+    procedure btnExibirClick(Sender: TObject);
+  private
+    fCaixa: TCaixa;
+    fOperacoes: TStringList;
+    procedure UltimaOp(operacao: string; resultado: string = '');
+    procedure LimpaMemo;
+    procedure Executar;
+    function RetornaValor: double;
+    procedure AbreCaixa;
+    procedure Suplemento;
+    procedure Sangria;
+    procedure SaldoAtual;
+    procedure FechaCaixa;
+    procedure ExibeOp;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCaixa: TfrmCaixa;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmCaixa.AbreCaixa;
+var
+  xValorInicial: double;
+begin
+  if not Assigned(fCaixa) then
+    fCaixa := TCaixa.Create;
+
+  fCaixa.AbreCaixa(RetornaValor);
+  UltimaOP('Caixa aberto com sucesso. Saldo inicial: ', formatFloat('R$ 0.00',fCaixa.SaldoInicial));
+  edtValor.Enabled := true;
+end;
+
+procedure TfrmCaixa.btnExecutarClick(Sender: TObject);
+begin
+  Executar;
+end;
+
+procedure TfrmCaixa.btnExibirClick(Sender: TObject);
+begin
+  ExibeOp;
+end;
+
+procedure TfrmCaixa.Executar;
+begin
+  case NOpcoes (rgOpcoes.itemIndex) of
+  OPAbrir:
+    AbreCaixa;
+  OPSuplemento:
+    Suplemento;
+  OPSangria:
+    Sangria;
+  OPSaldoAtual:
+    ;
+  OPFechar:
+    ;
+  else
+    raise Exception.Create('Erro. Seleciona uma opção acima');
+  end;
+end;
+
+procedure TfrmCaixa.ExibeOp;
+var
+  I: Integer;
+begin
+  mmOperacoes.Visible := true;
+  for I := 0 to fOperacoes.Count-1 do
+  begin
+    mmOperacoes.Lines.Add(fOperacoes.Strings[i]);
+  end;
+
+end;
+
+procedure TfrmCaixa.FechaCaixa;
+begin
+  edtValor.Enabled := false;
+  fCaixa.FechaCaixa;
+  UltimaOP('Caixa fechado. Saldo final: ', formatFloat('R$ 0.00',fCaixa.SaldoAtual));
+  mmOperacoes.Lines.Add('');
+  FreeAndNil(fCaixa);
+end;
+
+procedure TfrmCaixa.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  FreeAndNil(fCaixa);
+  FreeAndNil(fOperacoes);
+end;
+
+procedure TfrmCaixa.FormCreate(Sender: TObject);
+begin
+  fCaixa := TCaixa.Create;
+  fOperacoes := TStringList.Create;
+end;
+
+procedure TfrmCaixa.LimpaMemo;
+begin
+  mmOperacoes.Visible := false;
+  mmOperacoes.Clear;
+end;
+
+function TfrmCaixa.RetornaValor: double;
+var
+  xValor: double;
+begin
+  xValor := 0;
+  tryStrToFloat(edtValor.Text, xValor);
+  Result := xValor;
+end;
+
+procedure TfrmCaixa.RGOpcoesClick(Sender: TObject);
+begin
+  case NOpcoes (rgOpcoes.itemIndex) of
+  OPSaldoAtual:
+    SaldoAtual;
+  OPFechar:
+    FechaCaixa;
+  else
+    LimpaMemo;
+    edtValor.Enabled := true;
+  end;
+end;
+
+procedure TfrmCaixa.SaldoAtual;
+begin
+  edtValor.Enabled := false;
+  fCaixa.ChecaCaixaFechado;
+  UltimaOP('Saldo atual: ', formatFloat('R$ 0.00',fCaixa.SaldoAtual));
+end;
+
+procedure TfrmCaixa.Sangria;
+begin
+  fCaixa.RetiraValor(RetornaValor);
+  UltimaOP('Sangria de ', formatFloat('R$ 0.00', RetornaValor));
+end;
+
+procedure TfrmCaixa.Suplemento;
+begin
+  fCaixa.AdicionaValor(RetornaValor);
+  UltimaOP('Suplemento de ', formatFloat('R$ 0.00', RetornaValor));
+end;
+
+procedure TfrmCaixa.UltimaOp(operacao: string; resultado: string = '');
+begin
+  lblResultado.Caption := operacao + resultado;
+  edtValor.Text := '';
+  fOperacoes.Add(lblResultado.Caption);
+  LimpaMemo;
+end;
+
+end.
