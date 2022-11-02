@@ -1,0 +1,94 @@
+unit UCaixa;
+
+interface
+
+type
+
+Tcaixa = Class
+
+Private
+fSaldoInicial, fSaldofinal : Double;
+fCaixaAberto : Boolean;
+    function getCaixaAberto: Boolean;
+    function getSaldoFinal: Double;
+    function getSaldoInicial: Double;
+    procedure setCaixaAberto(const Value: Boolean);
+    procedure setSaldoFinal(const Value: Double);
+    procedure setSaldoInicial(const Value: Double);
+
+
+Public
+Constructor create(Const saldoInicial: Double; Const CaixaAberto : Boolean);
+
+Procedure abrirCaixa(Const value : double);
+Procedure retirarValor(Const Value : Double);
+Procedure adicionarValor(Const value : Double);
+Procedure fecharCaixa;
+Property SaldoInicial : Double read getSaldoInicial write setSaldoInicial;
+Property SaldoFinal : Double read getSaldoFinal write setSaldoFinal;
+Property CaixaAberto : Boolean read getCaixaAberto write setCaixaAberto;
+
+
+End;
+
+implementation
+
+{ Tcaixa }
+
+procedure Tcaixa.abrirCaixa(const value: double);
+begin
+
+end;
+
+procedure Tcaixa.adicionarValor(const value: Double);
+begin
+
+end;
+
+constructor Tcaixa.create(const saldoInicial: Double;
+  const CaixaAberto: Boolean);
+begin
+
+end;
+
+procedure Tcaixa.fecharCaixa;
+begin
+
+end;
+
+function Tcaixa.getCaixaAberto: Boolean;
+begin
+Result :=  CaixaAberto
+end;
+
+function Tcaixa.getSaldoFinal: Double;
+begin
+Result := SaldoFinal
+end;
+
+function Tcaixa.getSaldoInicial: Double;
+begin
+Result := SaldoInicial
+end;
+
+procedure Tcaixa.retirarValor(const Value: Double);
+begin
+
+end;
+
+procedure Tcaixa.setCaixaAberto(const Value: Boolean);
+begin
+FCaixaAberto := value
+end;
+
+procedure Tcaixa.setSaldoFinal(const Value: Double);
+begin
+FSaldoFinal := Value
+end;
+
+procedure Tcaixa.setSaldoInicial(const Value: Double);
+begin
+FSaldoInicial := Value
+end;
+
+end.

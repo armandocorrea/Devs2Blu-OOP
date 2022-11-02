@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/19 20:59:18.000.026,=C:\Users\jdomareski\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/24 18:52:33.000.585,=C:\Users\jdomareski\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/24 18:54:43.000.870,=C:\Users\jdomareski\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2022/10/24 18:54:56.000.022,C:\Users\jdomareski\Documents\Embarcadero\Studio\Projects\Principal.pas=C:\Users\jdomareski\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/24 18:54:56.000.022,C:\Users\jdomareski\Documents\Embarcadero\Studio\Projects\Principal.dfm=C:\Users\jdomareski\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2022/10/24 18:56:11.000.313,C:\Users\jdomareski\Documents\Embarcadero\Studio\Projects\UCaixa.pas=C:\Users\jdomareski\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2022/10/24 19:20:57.000.536,C:\Users\jdomareski\Documents\delphi2Blu2022\Final\Jefferson\Principal.dfm=C:\Users\jdomareski\Documents\Embarcadero\Studio\Projects\Principal.dfm</Transaction>
+    <Transaction>2022/10/24 19:20:57.000.536,C:\Users\jdomareski\Documents\delphi2Blu2022\Final\Jefferson\Principal.pas=C:\Users\jdomareski\Documents\Embarcadero\Studio\Projects\Principal.pas</Transaction>
+    <Transaction>2022/10/24 19:20:59.000.406,C:\Users\jdomareski\Documents\delphi2Blu2022\Final\Jefferson\UCaixa.pas=C:\Users\jdomareski\Documents\Embarcadero\Studio\Projects\UCaixa.pas</Transaction>
+    <Transaction>2022/10/24 19:21:01.000.085,C:\Users\jdomareski\Documents\delphi2Blu2022\Final\Jefferson\Project3.dproj=C:\Users\jdomareski\Documents\Embarcadero\Studio\Projects\Project3.dproj</Transaction>
+    <Transaction>2022/10/25 19:09:41.000.418,C:\Users\jdomareski\Documents\delphi2Blu2022\Final\Jefferson\UCaixa.pas=C:\Users\jdomareski\Documents\delphi2Blu2022\Final\Jefferson\Segunda Versao\UCaixa.pas</Transaction>
+    <Transaction>2022/10/25 19:09:54.000.051,C:\Users\jdomareski\Documents\delphi2Blu2022\Final\Jefferson\Principal.dfm=C:\Users\jdomareski\Documents\delphi2Blu2022\Final\Jefferson\Segunda Versao\Principal.dfm</Transaction>
+    <Transaction>2022/10/25 19:09:54.000.051,C:\Users\jdomareski\Documents\delphi2Blu2022\Final\Jefferson\Principal.pas=C:\Users\jdomareski\Documents\delphi2Blu2022\Final\Jefferson\Segunda Versao\Principal.pas</Transaction>
+    <Transaction>2022/10/25 19:10:08.000.478,C:\Users\jdomareski\Documents\delphi2Blu2022\Final\Jefferson\Project3.dproj=C:\Users\jdomareski\Documents\delphi2Blu2022\Final\Jefferson\Segunda Versao\Project3.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
