@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/24 18:44:54.000.681,=C:\Users\gabrielschneider\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:45:43.000.975,=C:\Users\gabrielschneider\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/24 18:45:58.000.215,C:\Users\gabrielschneider\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\gabrielschneider\Documents\Embarcadero\Studio\Projects\UFrmPrincipakl.pas</Transaction>
+    <Transaction>2022/10/24 18:45:58.000.215,C:\Users\gabrielschneider\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\gabrielschneider\Documents\Embarcadero\Studio\Projects\UFrmPrincipakl.dfm</Transaction>
+    <Transaction>2022/10/24 18:46:03.000.356,C:\Users\gabrielschneider\Documents\Embarcadero\Studio\Projects\UFrmPrincipakl.pas=C:\Users\gabrielschneider\Documents\Embarcadero\Studio\Projects\UFrmPrincipal.pas</Transaction>
+    <Transaction>2022/10/24 18:46:03.000.356,C:\Users\gabrielschneider\Documents\Embarcadero\Studio\Projects\UFrmPrincipakl.dfm=C:\Users\gabrielschneider\Documents\Embarcadero\Studio\Projects\UFrmPrincipal.dfm</Transaction>
+    <Transaction>2022/10/24 18:46:10.000.835,C:\Users\gabrielschneider\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\gabrielschneider\Documents\Embarcadero\Studio\Projects\UCaixa.pas</Transaction>
+    <Transaction>2022/10/24 19:14:21.000.451,C:\Users\gabrielschneider\Documents\Embarcadero\Studio\Projects\UFrmPrincipal.dfm=C:\Users\gabrielschneider\Desktop\Gabriel schneider\Programação\Caixa de SuperMercado\UFrmPrincipal.dfm</Transaction>
+    <Transaction>2022/10/24 19:14:21.000.451,C:\Users\gabrielschneider\Documents\Embarcadero\Studio\Projects\UFrmPrincipal.pas=C:\Users\gabrielschneider\Desktop\Gabriel schneider\Programação\Caixa de SuperMercado\UFrmPrincipal.pas</Transaction>
+    <Transaction>2022/10/24 19:14:24.000.093,C:\Users\gabrielschneider\Documents\Embarcadero\Studio\Projects\UCaixa.pas=C:\Users\gabrielschneider\Desktop\Gabriel schneider\Programação\Caixa de SuperMercado\UCaixa.pas</Transaction>
+    <Transaction>2022/10/24 19:14:46.000.756,C:\Users\gabrielschneider\Documents\Embarcadero\Studio\Projects\Project2.dproj=C:\Users\gabrielschneider\Desktop\Gabriel schneider\Programação\Caixa de SuperMercado\Caixa_de_SuperMercado.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
