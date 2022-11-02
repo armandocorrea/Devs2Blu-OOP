@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/05 21:21:44.000.438,=C:\Users\jcmoller\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:45:24.000.644,=C:\Users\jcmoller\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:46:23.000.795,C:\Users\jcmoller\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\jcmoller\Desktop\Dev2Blu\23 - Aula\uFrmPrincipal.pas</Transaction>
+    <Transaction>2022/10/24 18:46:23.000.795,C:\Users\jcmoller\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\jcmoller\Desktop\Dev2Blu\23 - Aula\uFrmPrincipal.dfm</Transaction>
+    <Transaction>2022/10/24 18:46:32.000.430,C:\Users\jcmoller\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\jcmoller\Desktop\Dev2Blu\23 - Aula\Prova.dproj</Transaction>
+    <Transaction>2022/10/24 18:57:08.000.841,=C:\Users\jcmoller\Desktop\Dev2Blu\23 - Aula\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:57:28.000.682,C:\Users\jcmoller\Desktop\Dev2Blu\23 - Aula\Unit1.pas=C:\Users\jcmoller\Desktop\Dev2Blu\23 - Aula\UCaixa.pas</Transaction>
+  </Transactions>
+</BorlandProject>

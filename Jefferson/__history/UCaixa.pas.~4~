@@ -1,0 +1,126 @@
+unit UCaixa;
+
+interface
+
+uses
+  SysInit;
+
+type
+
+Tcaixa = Class
+
+Private
+fSaldoInicial, fSaldofinal : Double;
+fCaixaAberto : Boolean;
+    function getCaixaAberto: Boolean;
+    function getSaldoFinal: Double;
+    function getSaldoInicial: Double;
+    procedure setCaixaAberto(const Value: Boolean);
+    procedure setSaldoFinal(const Value: Double);
+    procedure setSaldoInicial(const Value: Double);
+
+
+Public
+constructor create;
+
+Procedure abrirCaixa(Const value : double);
+Procedure retirarValor(Const Value : Double);
+Procedure adicionarValor(Const value : Double);
+Procedure fecharCaixa;
+Property SaldoInicial : Double read getSaldoInicial write setSaldoInicial;
+Property SaldoFinal : Double read getSaldoFinal write setSaldoFinal;
+Property CaixaAberto : Boolean read getCaixaAberto write setCaixaAberto;
+
+
+End;
+
+implementation
+
+uses
+  System.SysUtils;
+
+{ Tcaixa }
+
+procedure Tcaixa.abrirCaixa(const value: double);
+  begin
+    if (caixaAberto = true) then
+      raise Exception.Create('O Caixa já está aberto')
+    else if (value >=0) then
+    begin
+      caixaAberto := True;
+
+      saldoFinal :=  value;
+    end
+    else
+      raise Exception.Create('Valor inicial inserido incorretamente');
+  end;
+
+procedure Tcaixa.adicionarValor(const value: Double);
+  begin
+     if (caixaAberto = false) then
+      raise Exception.Create('O Caixa ainda não foi aberto')
+     else if (value >0) then
+          saldofinal := saldoFinal + Value
+     else
+      raise Exception.Create('Valor inserido incorretamente');
+
+  end;
+
+constructor Tcaixa.create;
+  begin
+    FSaldoInicial := 0;
+    fCaixaAberto  := False;
+  end;
+
+procedure Tcaixa.fecharCaixa;
+  begin
+   if (caixaAberto = false) then
+    raise Exception.Create('O caixa não está aberto')
+   else
+      caixaAberto :=False;
+  end;
+
+function Tcaixa.getCaixaAberto: Boolean;
+begin
+Result :=  CaixaAberto
+end;
+
+function Tcaixa.getSaldoFinal: Double;
+begin
+Result := SaldoFinal
+end;
+
+function Tcaixa.getSaldoInicial: Double;
+begin
+Result := SaldoInicial
+end;
+
+procedure Tcaixa.retirarValor(const Value: Double);
+  begin
+    if (caixaAberto = false) then
+      raise Exception.Create('O caixa não está aberto')
+    else if (value <= 0) then
+      raise Exception.Create('Digite um valor a retirar válido')
+    else if (saldofinal - value <0) then
+      raise Exception.Create('Não há valor suficiente para a retirada')
+    else
+        saldofinal := saldoFinal - value
+
+  end;
+
+procedure Tcaixa.setCaixaAberto(const Value: Boolean);
+begin
+FCaixaAberto := value
+end;
+
+procedure Tcaixa.setSaldoFinal(const Value: Double);
+begin
+FSaldoFinal := Value
+end;
+
+procedure Tcaixa.setSaldoInicial(const Value: Double);
+begin
+FSaldoInicial := Value
+end;
+
+end.

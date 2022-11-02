@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/04 21:23:32.000.661,=C:\Users\alinescholl\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/05 19:41:17.000.084,=C:\Users\alinescholl\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:45:17.752,=C:\Users\alinescholl\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:45:34.936,=C:\Users\alinescholl\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/24 18:51:52.832,C:\Users\alinescholl\Desktop\Aline---Devs2Blu---OOP\UCaixa.pas=C:\Users\alinescholl\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/24 19:15:30.560,C:\Users\alinescholl\Desktop\Aline---Devs2Blu---OOP\frmCaixa.pas=C:\Users\alinescholl\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 19:15:30.560,C:\Users\alinescholl\Desktop\Aline---Devs2Blu---OOP\frmCaixa.dfm=C:\Users\alinescholl\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/24 19:15:39.576,C:\Users\alinescholl\Desktop\Aline---Devs2Blu---OOP\CaixaDevs2Blu.dproj=C:\Users\alinescholl\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
