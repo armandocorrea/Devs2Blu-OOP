@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/26 20:15:28.000.580,=C:\Users\andersoncorrea\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/26 20:36:35.000.465,=C:\Users\andersoncorrea\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/27 21:14:00.000.925,=C:\Users\andersoncorrea\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/28 19:42:24.000.243,=C:\Users\andersoncorrea\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/18 21:50:07.000.672,=C:\Users\andersoncorrea\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/19 20:58:44.000.260,=C:\Users\andersoncorrea\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:49:21.575,=C:\Users\andersoncorrea\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:56:32.584,C:\Users\andersoncorrea\Documents\Devs2Blu-OOP\Anderson C\UfrmPrincipal.dfm=C:\Users\andersoncorrea\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/24 18:56:32.584,C:\Users\andersoncorrea\Documents\Devs2Blu-OOP\Anderson C\UfrmPrincipal.pas=C:\Users\andersoncorrea\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:57:16.675,C:\Users\andersoncorrea\Documents\Devs2Blu-OOP\Anderson C\CaixaSupermercado.dproj=C:\Users\andersoncorrea\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/10/24 18:57:29.488,=C:\Users\andersoncorrea\Documents\Devs2Blu-OOP\Anderson C\Unit1.pas</Transaction>
+    <Transaction>2022/10/24 18:57:40.302,C:\Users\andersoncorrea\Documents\Devs2Blu-OOP\Anderson C\UCaixa.pas=C:\Users\andersoncorrea\Documents\Devs2Blu-OOP\Anderson C\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
